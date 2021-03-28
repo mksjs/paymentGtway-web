@@ -8,6 +8,7 @@ public class PaymentGtwayWebApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(PaymentGtwayWebApplication.class, args);
+		System.out.print("Hello Manish");
 	}
 
 }
