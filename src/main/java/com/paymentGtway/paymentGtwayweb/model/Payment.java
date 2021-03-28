@@ -1,5 +1,9 @@
 package com.paymentGtway.paymentGtwayweb.model;
 
+/**
+ * @author manish
+ *
+ */
 public class Payment {
 	private String merchantRefNum;
     private String paymentHandleToken;

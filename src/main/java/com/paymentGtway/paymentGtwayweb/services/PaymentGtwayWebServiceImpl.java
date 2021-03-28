@@ -21,6 +21,11 @@ import com.paymentGtway.paymentGtwayweb.model.PaymentGtwayWebResponse;
 import com.paymentGtway.paymentGtwayweb.model.TokenInfo;
 import com.paymentGtway.paymentGtwayweb.model.TokenResponse;
 
+
+/**
+ * @author manish
+ *
+ */
 @Service
 public class PaymentGtwayWebServiceImpl implements PaymentGtwayWebService {
 
@@ -41,7 +46,7 @@ public class PaymentGtwayWebServiceImpl implements PaymentGtwayWebService {
 		final JacksonJsonProvider jacksonJsonProvider = new JacksonJaxbJsonProvider()
 				.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 		Client client = ClientBuilder.newClient(new ClientConfig(jacksonJsonProvider));
-		Entity<String> payload = Entity.json(jsonString);
+		Entity payload = Entity.json(jsonString);
 		Response response = client.target("https://api.test.paysafe.com/paymenthub/v1/payments")
 				.request(String.valueOf(MediaType.APPLICATION_JSON)).header("Authorization", base64)
 				.header("Simulator", "\"EXTERNAL\"").header("Access-Control-Allow-Origin", "*").post(payload);
@@ -66,7 +71,7 @@ public class PaymentGtwayWebServiceImpl implements PaymentGtwayWebService {
         }
         final JacksonJsonProvider jacksonJsonProvider = new JacksonJaxbJsonProvider().configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
         Client client = ClientBuilder.newClient(new ClientConfig(jacksonJsonProvider));
-        Entity<String> payload = Entity.json(jsonString);
+        Entity payload = Entity.json(jsonString);
         Response response = client.target("https://api.test.paysafe.com/paymenthub/v1/customers/" + tokenInfo.getCustomerId() + "/singleusecustomertokens")
                 .request(String.valueOf(MediaType.APPLICATION_JSON))
                 .header("Authorization", base64)

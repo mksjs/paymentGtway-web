@@ -5,6 +5,10 @@ import com.paymentGtway.paymentGtwayweb.model.PaymentGtwayWebResponse;
 import com.paymentGtway.paymentGtwayweb.model.TokenInfo;
 import com.paymentGtway.paymentGtwayweb.model.TokenResponse;
 
+/**
+ * @author manish
+ *
+ */
 public interface PaymentGtwayWebService {
 
 	PaymentGtwayWebResponse makePayment(Payment payment);
