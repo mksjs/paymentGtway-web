@@ -14,6 +14,10 @@ import com.paymentGtway.paymentGtwayweb.model.TokenResponse;
 import com.paymentGtway.paymentGtwayweb.services.PaymentGtwayWebService;
 
 
+/**
+ * @author manish
+ *
+ */
 @RestController
 @RequestMapping("/pay")
 public class PaymentGtwayWebController {

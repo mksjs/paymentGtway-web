@@ -2,6 +2,10 @@ package com.paymentGtway.paymentGtwayweb.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 
+/**
+ * @author manish
+ *
+ */
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class PaymentGtwayWebInfo {
 	private String merchantRefNum;
@@ -11,7 +15,7 @@ public class PaymentGtwayWebInfo {
     private boolean dupCheck = true;
     private boolean settleWithAuth = false;
     private String currencyCode = "USD";
-    private String customerIp = "168.0.0.1";
+    private String customerIp = "172.0.0.1";
     private String description = "Bought book clean code";
 
 

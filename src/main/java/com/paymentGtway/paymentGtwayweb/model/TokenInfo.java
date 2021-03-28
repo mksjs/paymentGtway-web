@@ -3,6 +3,10 @@ package com.paymentGtway.paymentGtwayweb.model;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author manish
+ *
+ */
 public class TokenInfo {
 	private String merchantRefNum;
 	private String customerId;
